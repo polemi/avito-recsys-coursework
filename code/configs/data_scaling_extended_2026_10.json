@@ -1,0 +1,53 @@
+{
+  "data_version": "refresh_2026_08_scaling_extended_2026_10",
+  "raw_dir": "data/refresh_2026_08/raw",
+  "processed_dir": "data/refresh_2026_08/processed",
+  "events_pattern": "events_*.parquet",
+  "contacts_pattern": "contacts_*.parquet",
+  "taxonomy_file": "taxonomy.parquet",
+  "partition_column": "user_bucket_index",
+  "event_count_column": "count_views",
+  "vocab_file": "vocab_leaf_refresh_2026_08.json",
+  "history_days": 90,
+  "novelty_days": 90,
+  "target_days": 14,
+  "min_history_events": 5,
+  "max_history_events": 128,
+  "max_views_per_leaf": 5,
+  "n_buckets": 20,
+  "snapshot_dates": [
+    "2025-11-01",
+    "2025-12-01",
+    "2026-01-01",
+    "2026-02-01",
+    "2026-03-01",
+    "2026-04-01",
+    "2026-05-01",
+    "2026-06-01",
+    "2026-07-01",
+    "2026-08-01"
+  ],
+  "dataset_tiers": {
+    "tiny": 1,
+    "small": 5,
+    "medium": 10,
+    "full": 20
+  },
+  "folds": [
+    {
+      "fold": 30,
+      "train_snapshots": [
+        "2025-11-01",
+        "2025-12-01",
+        "2026-01-01",
+        "2026-02-01",
+        "2026-03-01",
+        "2026-04-01",
+        "2026-05-01"
+      ],
+      "validation_snapshot": "2026-06-01",
+      "test_snapshot": "2026-07-01",
+      "role": "scaling_extension"
+    }
+  ]
+}

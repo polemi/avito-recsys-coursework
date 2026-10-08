@@ -1,0 +1,15 @@
+{
+  "d_model": 64,
+  "n_heads": 4,
+  "n_layers": 2,
+  "ff_dim": 128,
+  "dropout": 0.15,
+  "max_len": 128,
+  "n_time_buckets": 32,
+  "batch_size": 128,
+  "learning_rate": 0.001,
+  "weight_decay": 0.00001,
+  "positive_weight": 50.0,
+  "attention_diversity_weight": 0.1,
+  "interest_diversity_weight": 0.5
+}

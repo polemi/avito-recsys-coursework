@@ -1,0 +1,48 @@
+{
+  "history_days": 90,
+  "novelty_days": 90,
+  "target_days": 14,
+  "min_history_events": 5,
+  "max_history_events": 128,
+  "max_views_per_leaf": 5,
+  "n_buckets": 32,
+  "snapshot_dates": [
+    "2026-03-30",
+    "2026-04-13",
+    "2026-04-27",
+    "2026-05-11",
+    "2026-05-25",
+    "2026-06-08"
+  ],
+  "folds": [
+    {
+      "fold": 0,
+      "train_snapshots": ["2026-03-30"],
+      "validation_snapshot": "2026-04-13",
+      "test_snapshot": "2026-04-27",
+      "role": "cv"
+    },
+    {
+      "fold": 1,
+      "train_snapshots": ["2026-03-30", "2026-04-13"],
+      "validation_snapshot": "2026-04-27",
+      "test_snapshot": "2026-05-11",
+      "role": "cv"
+    },
+    {
+      "fold": 2,
+      "train_snapshots": ["2026-03-30", "2026-04-13", "2026-04-27"],
+      "validation_snapshot": "2026-05-11",
+      "test_snapshot": "2026-05-25",
+      "role": "cv"
+    },
+    {
+      "fold": 3,
+      "train_snapshots": ["2026-03-30", "2026-04-13", "2026-04-27", "2026-05-11"],
+      "validation_snapshot": "2026-05-25",
+      "test_snapshot": "2026-06-08",
+      "role": "final_holdout"
+    }
+  ]
+}
+

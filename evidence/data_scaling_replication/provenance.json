@@ -1,0 +1,8 @@
+{
+  "seed42_bootstrap": "artifacts/data_scaling_expanded_2026_10/seed42_kaggle/results/audit_2026_10_05/paired_bootstrap_required.csv",
+  "seed7_bootstrap": "artifacts/data_scaling_expanded_2026_10/endpoint_replication_v2/seed7_paired_bootstrap/paired_bootstrap.csv",
+  "seed123_bootstrap": "artifacts/data_scaling_expanded_2026_10/endpoint_replication_seed123_v3/extracted/endpoint_paired_bootstrap.csv",
+  "seed123_download": "artifacts/data_scaling_expanded_2026_10/endpoint_replication_seed123_v3/download/avito_endpoint_scaling_recovery_seed123.zip",
+  "seed123_download_sha256": "372ddcbff77398d074917a8bd9c20853418bf13625803173d0577d516c437fea",
+  "audit_script": "scripts/46_audit_endpoint_replication.py"
+}

@@ -1,0 +1,28 @@
+{
+  "data_version": "history_180_novelty_90_2026_08",
+  "raw_dir": "data/refresh_2026_08/raw",
+  "processed_dir": "data/window_ablation_2026_08/history_180",
+  "events_pattern": "events_*.parquet",
+  "contacts_pattern": "contacts_*.parquet",
+  "taxonomy_file": "taxonomy.parquet",
+  "partition_column": "user_bucket_index",
+  "event_count_column": "count_views",
+  "vocab_file": "vocab_leaf.json",
+  "history_days": 180,
+  "novelty_days": 90,
+  "target_days": 14,
+  "min_history_events": 5,
+  "max_history_events": 128,
+  "max_views_per_leaf": 5,
+  "n_buckets": 20,
+  "snapshot_dates": ["2026-02-01", "2026-03-01", "2026-04-01", "2026-05-01", "2026-06-01"],
+  "folds": [
+    {
+      "fold": 3,
+      "train_snapshots": ["2026-02-01", "2026-03-01", "2026-04-01", "2026-05-01"],
+      "validation_snapshot": "2026-06-01",
+      "test_snapshot": "2026-07-01",
+      "role": "cv"
+    }
+  ]
+}

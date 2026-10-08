@@ -1,0 +1,94 @@
+{
+  "status": "pass",
+  "generated_at_utc": "2026-10-08T06:09:07.697472+00:00",
+  "runtime": {
+    "python": "3.12.2",
+    "platform": "macOS-14.4-arm64-arm-64bit"
+  },
+  "pytest": {
+    "command": [
+      "python",
+      "-m",
+      "pytest",
+      "-q"
+    ],
+    "returncode": 0,
+    "output": "......................                                                   [100%]\n=============================== warnings summary ===============================\n../../../../../..<RUNTIME_PATH>:22\n  <RUNTIME_PATH>:22: UserWarning: Pandas requires version '2.10.2' or newer of 'numexpr' (version '2.8.7' currently installed).\n    from pandas.core.computation.check import NUMEXPR_INSTALLED\n\n../../../../../..<RUNTIME_PATH>:56\n  <RUNTIME_PATH>:56: UserWarning: Pandas requires version '1.4.2' or newer of 'bottleneck' (version '1.3.7' currently installed).\n    from pandas.core import (\n\ntests/test_model.py::test_multi_interest_forward_is_finite_and_respects_padding\ntests/test_model.py::test_training_objective_components_have_finite_gradients\n  <PROJECT_ROOT>/src/avito_recsys/model.py:47: UserWarning: enable_nested_tensor is True, but self.use_nested_tensor is False because encoder_layer.norm_first was True\n    self.encoder = nn.TransformerEncoder(layer, num_layers=n_layers, norm=nn.LayerNorm(d_model))\n\n-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html\n22 passed, 4 warnings in 4.41s"
+  },
+  "synthetic_smoke": {
+    "command": [
+      "python",
+      "scripts/47_submission_smoke.py"
+    ],
+    "returncode": 0,
+    "output": "<RUNTIME_PATH>:22: UserWarning: Pandas requires version '2.10.2' or newer of 'numexpr' (version '2.8.7' currently installed).\n  from pandas.core.computation.check import NUMEXPR_INSTALLED\n<RUNTIME_PATH>:56: UserWarning: Pandas requires version '1.4.2' or newer of 'bottleneck' (version '1.3.7' currently installed).\n  from pandas.core import (\n<PROJECT_ROOT>/src/avito_recsys/model.py:47: UserWarning: enable_nested_tensor is True, but self.use_nested_tensor is False because encoder_layer.norm_first was True\n  self.encoder = nn.TransformerEncoder(layer, num_layers=n_layers, norm=nn.LayerNorm(d_model))\n{\n  \"status\": \"pass\",\n  \"synthetic_only\": true,\n  \"selected_users\": 4,\n  \"selected_rows\": 4,\n  \"evaluation_rows\": 5,\n  \"snapshot_ids_are_sha256\": true,\n  \"model_output_shape\": [\n    4,\n    9\n  ],\n  \"recall_at_5\": 1.0,\n  \"ndcg_at_5\": 0.8772153153380493\n}"
+  },
+  "compileall": {
+    "command": [
+      "python",
+      "-m",
+      "compileall",
+      "-q",
+      "<PROJECT_ROOT>/deliverables/avito_recsys_academic_final_2026_10_08/code/src",
+      "<PROJECT_ROOT>/deliverables/avito_recsys_academic_final_2026_10_08/code/scripts"
+    ],
+    "returncode": 0,
+    "output": ""
+  },
+  "isolated_packaged_copy": {
+    "venv_creation": {
+      "command": [
+        "python",
+        "-m",
+        "venv",
+        "--system-site-packages",
+        "<RUNTIME_PATH>"
+      ],
+      "returncode": 0,
+      "output": ""
+    },
+    "package_install": {
+      "command": [
+        "python",
+        "-m",
+        "pip",
+        "install",
+        "--no-deps",
+        "--no-build-isolation",
+        "<PROJECT_ROOT>/deliverables/avito_recsys_academic_final_2026_10_08/code"
+      ],
+      "returncode": 0,
+      "output": "WARNING: The directory '<LOCAL_PATH> or its parent directory is not owned or is not writable by the current user. The cache has been disabled. Check the permissions and owner of that directory. If executing pip with sudo, you should use sudo's -H flag.\nProcessing <PROJECT_ROOT>/deliverables/avito_recsys_academic_final_2026_10_08/code\n  Preparing metadata (pyproject.toml): started\n  Preparing metadata (pyproject.toml): finished with status 'done'\nBuilding wheels for collected packages: avito-recsys-coursework\n  Building wheel for avito-recsys-coursework (pyproject.toml): started\n  Building wheel for avito-recsys-coursework (pyproject.toml): finished with status 'done'\n  Created wheel for avito-recsys-coursework: filename=avito_recsys_coursework-0.2.0-py3-none-any.whl size=16896 sha256=f7f0c90107531e9c099c1701c52d43580ed8e3fbcb5f3ed0808962d317db7235\n  Stored in directory: <RUNTIME_PATH>\nSuccessfully built avito-recsys-coursework\nInstalling collected packages: avito-recsys-coursework\nSuccessfully installed avito-recsys-coursework-0.2.0"
+    },
+    "pytest": {
+      "command": [
+        "python",
+        "-m",
+        "pytest",
+        "-q"
+      ],
+      "returncode": 0,
+      "output": "......................                                                   [100%]\n=============================== warnings summary ===============================\n../../../../../../../../..<RUNTIME_PATH>:22\n  <RUNTIME_PATH>:22: UserWarning: Pandas requires version '2.10.2' or newer of 'numexpr' (version '2.8.7' currently installed).\n    from pandas.core.computation.check import NUMEXPR_INSTALLED\n\n../../../../../../../../..<RUNTIME_PATH>:56\n  <RUNTIME_PATH>:56: UserWarning: Pandas requires version '1.4.2' or newer of 'bottleneck' (version '1.3.7' currently installed).\n    from pandas.core import (\n\ntests/test_model.py::test_multi_interest_forward_is_finite_and_respects_padding\ntests/test_model.py::test_training_objective_components_have_finite_gradients\n  <PROJECT_ROOT>/deliverables/avito_recsys_academic_final_2026_10_08/code/src/avito_recsys/model.py:47: UserWarning: enable_nested_tensor is True, but self.use_nested_tensor is False because encoder_layer.norm_first was True\n    self.encoder = nn.TransformerEncoder(layer, num_layers=n_layers, norm=nn.LayerNorm(d_model))\n\n-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html\n22 passed, 4 warnings in 1.52s"
+    },
+    "synthetic_smoke": {
+      "command": [
+        "python",
+        "scripts/47_submission_smoke.py"
+      ],
+      "returncode": 0,
+      "output": "<RUNTIME_PATH>:22: UserWarning: Pandas requires version '2.10.2' or newer of 'numexpr' (version '2.8.7' currently installed).\n  from pandas.core.computation.check import NUMEXPR_INSTALLED\n<RUNTIME_PATH>:56: UserWarning: Pandas requires version '1.4.2' or newer of 'bottleneck' (version '1.3.7' currently installed).\n  from pandas.core import (\n<RUNTIME_PATH>:47: UserWarning: enable_nested_tensor is True, but self.use_nested_tensor is False because encoder_layer.norm_first was True\n  self.encoder = nn.TransformerEncoder(layer, num_layers=n_layers, norm=nn.LayerNorm(d_model))\n{\n  \"status\": \"pass\",\n  \"synthetic_only\": true,\n  \"selected_users\": 4,\n  \"selected_rows\": 4,\n  \"evaluation_rows\": 5,\n  \"snapshot_ids_are_sha256\": true,\n  \"model_output_shape\": [\n    4,\n    9\n  ],\n  \"recall_at_5\": 1.0,\n  \"ndcg_at_5\": 0.8772153153380493\n}"
+    }
+  },
+  "privacy_and_stale_scan": {
+    "status": "pass",
+    "absolute_local_path_hits": 0,
+    "stale_claim_hits": 0,
+    "notebook_outputs": 0,
+    "forbidden_row_level_data_files": 0,
+    "raw_data_included": false,
+    "direct_identifier_values_included": false,
+    "note": "Schema names such as user_id remain in source code; no source values are packaged."
+  },
+  "zip_integrity": "checked after report generation",
+  "scope_note": "Full training needs restricted snapshots and GPU; the public package validates code with synthetic data."
+}

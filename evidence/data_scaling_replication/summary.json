@@ -1,0 +1,196 @@
+{
+  "status": "pass",
+  "estimand": "July test metric at full (~2M) minus 1.2M distinct positive train users",
+  "configuration": {
+    "model": "reduced Transformer, d_model=64, K=2",
+    "subset_seed": 42,
+    "model_seeds": [
+      42,
+      7,
+      123
+    ],
+    "checkpoint_selection": "fixed June positive-only audience, n=20,000",
+    "final_evaluation": "fixed July positive-only audience, n=100,000",
+    "full_exact_users": 1985972,
+    "human_readable_label": "2 млн пользователей"
+  },
+  "audience": {
+    "ordered_snapshot_id_sha256": "dd18cc829b04dca2f691c25aca2229e3444a787f1b6aeaea4bbb235f459d7490",
+    "ordered_labels_sha256": "f99012ae81838bf83a94d8d524d54ca1acc19a5969f8065c484b7d83dcaa2f9c",
+    "same_ordered_ids_and_labels_all_runs": true,
+    "raw_ids_present": false
+  },
+  "results": [
+    {
+      "model_seed": 42,
+      "metric": "recall@5",
+      "n_users": 100000,
+      "full_mean": 0.3986459005577756,
+      "train_1_2m_mean": 0.39479223255910756,
+      "delta_full_minus_1_2m": 0.0038536679986679984,
+      "ci95_low": 0.002383722267316013,
+      "ci95_high": 0.005330736412198901,
+      "bootstrap_fraction_delta_le_zero": 0.0
+    },
+    {
+      "model_seed": 42,
+      "metric": "ndcg@5",
+      "n_users": 100000,
+      "full_mean": 0.3083555063642228,
+      "train_1_2m_mean": 0.30488862502930075,
+      "delta_full_minus_1_2m": 0.0034668813349220395,
+      "ci95_low": 0.0024948903290353134,
+      "ci95_high": 0.004439351400946333,
+      "bootstrap_fraction_delta_le_zero": 0.0
+    },
+    {
+      "model_seed": 7,
+      "metric": "recall@5",
+      "n_users": 100000,
+      "full_mean": 0.39695823093573096,
+      "train_1_2m_mean": 0.3940142617798868,
+      "delta_full_minus_1_2m": 0.002943969155844156,
+      "ci95_low": 0.0014137953914141411,
+      "ci95_high": 0.0044693441017316015,
+      "bootstrap_fraction_delta_le_zero": 0.0
+    },
+    {
+      "model_seed": 7,
+      "metric": "ndcg@5",
+      "n_users": 100000,
+      "full_mean": 0.3069511536743099,
+      "train_1_2m_mean": 0.3044071950124437,
+      "delta_full_minus_1_2m": 0.0025439586618662725,
+      "ci95_low": 0.0015333696047981312,
+      "ci95_high": 0.00355053251979802,
+      "bootstrap_fraction_delta_le_zero": 0.0
+    },
+    {
+      "model_seed": 123,
+      "metric": "recall@5",
+      "n_users": 100000,
+      "full_mean": 0.3961256614912865,
+      "train_1_2m_mean": 0.3941164514929514,
+      "delta_full_minus_1_2m": 0.0020092099983349,
+      "ci95_low": 0.0005377508037101,
+      "ci95_high": 0.0035161618641774,
+      "bootstrap_fraction_delta_le_zero": 0.0045
+    },
+    {
+      "model_seed": 123,
+      "metric": "ndcg@5",
+      "n_users": 100000,
+      "full_mean": 0.3065219719358774,
+      "train_1_2m_mean": 0.3051005799716143,
+      "delta_full_minus_1_2m": 0.0014213919642631,
+      "ci95_low": 0.0004391996584666,
+      "ci95_high": 0.0024158122804783,
+      "bootstrap_fraction_delta_le_zero": 0.0018
+    }
+  ],
+  "endpoint_metrics": [
+    {
+      "model_seed": 42,
+      "endpoint": "1.2M",
+      "exact_distinct_train_users": 1200000,
+      "train_rows": 2514620,
+      "epochs_completed": 10,
+      "selected_epoch": 7,
+      "june_validation_recall@5": 0.40432628468753473,
+      "june_validation_ndcg@5": 0.3145068875240079,
+      "july_test_recall@5": 0.39479223255910756,
+      "july_test_ndcg@5": 0.30488862502930075
+    },
+    {
+      "model_seed": 42,
+      "endpoint": "2M",
+      "exact_distinct_train_users": 1985972,
+      "train_rows": 4162636,
+      "epochs_completed": 11,
+      "selected_epoch": 8,
+      "june_validation_recall@5": 0.4067421427183927,
+      "june_validation_ndcg@5": 0.3164943169109502,
+      "july_test_recall@5": 0.39864590055777555,
+      "july_test_ndcg@5": 0.3083555063642228
+    },
+    {
+      "model_seed": 7,
+      "endpoint": "1.2M",
+      "exact_distinct_train_users": 1200000,
+      "train_rows": 2514620,
+      "epochs_completed": 8,
+      "selected_epoch": 5,
+      "june_validation_recall@5": 0.40301288697413695,
+      "june_validation_ndcg@5": 0.31297225019486813,
+      "july_test_recall@5": 0.3940142617798868,
+      "july_test_ndcg@5": 0.3044071950124437
+    },
+    {
+      "model_seed": 7,
+      "endpoint": "2M",
+      "exact_distinct_train_users": 1985972,
+      "train_rows": 4162636,
+      "epochs_completed": 12,
+      "selected_epoch": 9,
+      "june_validation_recall@5": 0.4067757886557886,
+      "june_validation_ndcg@5": 0.315970210708315,
+      "july_test_recall@5": 0.3969582309357309,
+      "july_test_ndcg@5": 0.3069511536743099
+    },
+    {
+      "model_seed": 123,
+      "endpoint": "1.2M",
+      "exact_distinct_train_users": 1200000,
+      "train_rows": 2514620,
+      "epochs_completed": 9,
+      "selected_epoch": 6,
+      "june_validation_recall@5": 0.4024792026029526,
+      "june_validation_ndcg@5": 0.31373597924217245,
+      "july_test_recall@5": 0.39411645149295155,
+      "july_test_ndcg@5": 0.3051005799716143
+    },
+    {
+      "model_seed": 123,
+      "endpoint": "2M",
+      "exact_distinct_train_users": 1985972,
+      "train_rows": 4162636,
+      "epochs_completed": 12,
+      "selected_epoch": 10,
+      "june_validation_recall@5": 0.406101129009879,
+      "june_validation_ndcg@5": 0.3159254893205885,
+      "july_test_recall@5": 0.39612566149128653,
+      "july_test_ndcg@5": 0.30652197193587744
+    }
+  ],
+  "descriptive_across_model_seeds": [
+    {
+      "metric": "recall@5",
+      "model_seeds": "42,7,123",
+      "n_model_seeds": 3,
+      "positive_seeds": 3,
+      "mean_delta": 0.0029356157176156847,
+      "sample_sd_delta": 0.0009222573738907543,
+      "min_delta": 0.0020092099983349,
+      "max_delta": 0.0038536679986679984,
+      "interpretation": "descriptive only; n=3 is not used for an across-seed confidence interval"
+    },
+    {
+      "metric": "ndcg@5",
+      "model_seeds": "42,7,123",
+      "n_model_seeds": 3,
+      "positive_seeds": 3,
+      "mean_delta": 0.002477410653683804,
+      "sample_sd_delta": 0.0010243672043825235,
+      "min_delta": 0.0014213919642631,
+      "max_delta": 0.0034668813349220395,
+      "interpretation": "descriptive only; n=3 is not used for an across-seed confidence interval"
+    }
+  ],
+  "conclusion": "The full (~2M) endpoint exceeds 1.2M for Recall@5 and NDCG@5 in all three model initializations; every within-seed paired 95% interval excludes zero. The across-seed mean and SD are descriptive because only three model seeds were run.",
+  "seed123_recovery": {
+    "version_id": 355414766,
+    "zip_sha256": "372ddcbff77398d074917a8bd9c20853418bf13625803173d0577d516c437fea",
+    "status": "complete",
+    "oom": false
+  }
+}

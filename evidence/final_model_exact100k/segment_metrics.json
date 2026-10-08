@@ -1,0 +1,37 @@
+[
+  {
+    "dimension": "history_length",
+    "segment": "5-20 events",
+    "n_users": 12946,
+    "recall@5": 0.4347940674856324,
+    "ndcg@5": 0.34056947223169226
+  },
+  {
+    "dimension": "history_length",
+    "segment": "51-128 events",
+    "n_users": 69536,
+    "recall@5": 0.3890374934880659,
+    "ndcg@5": 0.3003784139879033
+  },
+  {
+    "dimension": "history_length",
+    "segment": "21-50 events",
+    "n_users": 17518,
+    "recall@5": 0.4442536352029445,
+    "ndcg@5": 0.3429688361744985
+  },
+  {
+    "dimension": "target_count",
+    "segment": "one target",
+    "n_users": 69510,
+    "recall@5": 0.43428283700187026,
+    "ndcg@5": 0.3174152973524812
+  },
+  {
+    "dimension": "target_count",
+    "segment": "multiple targets",
+    "n_users": 30490,
+    "recall@5": 0.3370413357277902,
+    "ndcg@5": 0.30307368106619315
+  }
+]

@@ -1,0 +1,28 @@
+{
+  "data_version": "expanded_distinct_user_scaling_2of30_2026_10",
+  "processed_dir": ".",
+  "vocab_file": "vocab.json",
+  "history_days": 90,
+  "novelty_days": 90,
+  "target_days": 14,
+  "folds": [
+    {
+      "fold": 0,
+      "train_snapshots": [
+        "2026-05-01"
+      ],
+      "source_train_snapshots": [
+        "2025-11-01",
+        "2025-12-01",
+        "2026-01-01",
+        "2026-02-01",
+        "2026-03-01",
+        "2026-04-01",
+        "2026-05-01"
+      ],
+      "validation_snapshot": "2026-06-01",
+      "test_snapshot": "2026-07-01",
+      "role": "scaling_extension"
+    }
+  ]
+}

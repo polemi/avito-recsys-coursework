@@ -1,0 +1,253 @@
+{
+  "protocol": {
+    "evaluation_users": 100000,
+    "evaluation_period": "2026-07-01",
+    "same_snapshot_ids_labels_and_candidate_masks": true,
+    "evaluation_snapshot_validation": {
+      "evaluation_snapshot": "reports/kaggle/expanded_user_scaling_2026_10/scaling_data/snapshots/snapshot_2026-07-01.parquet",
+      "source_rows": 100000,
+      "labels_verified": true,
+      "candidate_masks_verified": true,
+      "masked_category_ranking_violations_total": 0
+    },
+    "transformer": {
+      "configuration": "d=128, K=2",
+      "train_distinct_users": 1985972,
+      "train_rows": 4162636,
+      "completed_epochs": 12,
+      "selected_epoch": 12,
+      "seed": 42
+    },
+    "puresvd_train_cap_rows": 768708,
+    "old_flow": "Reproducible 30-day offline adaptation of the historical transition logic; not a metric of the original production business model.",
+    "alpha": 0.05,
+    "bootstrap_repeats": 20000
+  },
+  "comparison": [
+    {
+      "method": "random",
+      "display_name": "Случайное ранжирование",
+      "n_users": 100000,
+      "recall@5": 0.014969603285603284,
+      "ndcg@5": 0.009675025851146516
+    },
+    {
+      "method": "most_popular",
+      "display_name": "Популярность",
+      "n_users": 100000,
+      "recall@5": 0.1476525572899323,
+      "ndcg@5": 0.09923787468598678
+    },
+    {
+      "method": "old_flow_monthly_adaptation",
+      "display_name": "Адаптация модели переходов (30 дней)",
+      "n_users": 100000,
+      "recall@5": 0.16851209207459208,
+      "ndcg@5": 0.13660500489448707
+    },
+    {
+      "method": "weighted_cooccurrence",
+      "display_name": "Совместная встречаемость",
+      "n_users": 100000,
+      "recall@5": 0.24973245203407704,
+      "ndcg@5": 0.1841974706913615
+    },
+    {
+      "method": "puresvd_fold_in",
+      "display_name": "PureSVD",
+      "n_users": 100000,
+      "recall@5": 0.30738330081030074,
+      "ndcg@5": 0.23324126041243343
+    },
+    {
+      "method": "transformer_d128_k2_full2m",
+      "display_name": "Transformer d=128, K=2, полный пул",
+      "n_users": 100000,
+      "recall@5": 0.40463390326340326,
+      "ndcg@5": 0.313042538546792
+    }
+  ],
+  "paired_bootstrap": [
+    {
+      "reference": "transformer_d128_k2_full2m",
+      "comparison": "random",
+      "metric": "recall@5",
+      "n_users": 100000,
+      "alpha": 0.05,
+      "repeats": 20000,
+      "seed": 42,
+      "mean_difference": 0.3896642999777999,
+      "ci95_low": 0.38674752494727493,
+      "ci95_high": 0.3925310899489399,
+      "p_bootstrap_le_zero": 0.0,
+      "statistically_significant_at_alpha_0_05": true
+    },
+    {
+      "reference": "transformer_d128_k2_full2m",
+      "comparison": "random",
+      "metric": "ndcg@5",
+      "n_users": 100000,
+      "alpha": 0.05,
+      "repeats": 20000,
+      "seed": 42,
+      "mean_difference": 0.30336751269564544,
+      "ci95_low": 0.30103379411264053,
+      "ci95_high": 0.3056929146648926,
+      "p_bootstrap_le_zero": 0.0,
+      "statistically_significant_at_alpha_0_05": true
+    },
+    {
+      "reference": "transformer_d128_k2_full2m",
+      "comparison": "most_popular",
+      "metric": "recall@5",
+      "n_users": 100000,
+      "alpha": 0.05,
+      "repeats": 20000,
+      "seed": 42,
+      "mean_difference": 0.256981345973471,
+      "ci95_low": 0.25396593045183985,
+      "ci95_high": 0.25994404660478415,
+      "p_bootstrap_le_zero": 0.0,
+      "statistically_significant_at_alpha_0_05": true
+    },
+    {
+      "reference": "transformer_d128_k2_full2m",
+      "comparison": "most_popular",
+      "metric": "ndcg@5",
+      "n_users": 100000,
+      "alpha": 0.05,
+      "repeats": 20000,
+      "seed": 42,
+      "mean_difference": 0.21380466386080524,
+      "ci95_low": 0.21148810426486686,
+      "ci95_high": 0.2161497401416011,
+      "p_bootstrap_le_zero": 0.0,
+      "statistically_significant_at_alpha_0_05": true
+    },
+    {
+      "reference": "transformer_d128_k2_full2m",
+      "comparison": "weighted_cooccurrence",
+      "metric": "recall@5",
+      "n_users": 100000,
+      "alpha": 0.05,
+      "repeats": 20000,
+      "seed": 42,
+      "mean_difference": 0.15490145122932625,
+      "ci95_low": 0.15220840327658453,
+      "ci95_high": 0.1576025937600594,
+      "p_bootstrap_le_zero": 0.0,
+      "statistically_significant_at_alpha_0_05": true
+    },
+    {
+      "reference": "transformer_d128_k2_full2m",
+      "comparison": "weighted_cooccurrence",
+      "metric": "ndcg@5",
+      "n_users": 100000,
+      "alpha": 0.05,
+      "repeats": 20000,
+      "seed": 42,
+      "mean_difference": 0.12884506785543046,
+      "ci95_low": 0.12676444802934084,
+      "ci95_high": 0.130937245704524,
+      "p_bootstrap_le_zero": 0.0,
+      "statistically_significant_at_alpha_0_05": true
+    },
+    {
+      "reference": "transformer_d128_k2_full2m",
+      "comparison": "puresvd_fold_in",
+      "metric": "recall@5",
+      "n_users": 100000,
+      "alpha": 0.05,
+      "repeats": 20000,
+      "seed": 42,
+      "mean_difference": 0.09725060245310245,
+      "ci95_low": 0.09484834412878787,
+      "ci95_high": 0.0996438009018759,
+      "p_bootstrap_le_zero": 0.0,
+      "statistically_significant_at_alpha_0_05": true
+    },
+    {
+      "reference": "transformer_d128_k2_full2m",
+      "comparison": "puresvd_fold_in",
+      "metric": "ndcg@5",
+      "n_users": 100000,
+      "alpha": 0.05,
+      "repeats": 20000,
+      "seed": 42,
+      "mean_difference": 0.0798012781343585,
+      "ci95_low": 0.0779683787667894,
+      "ci95_high": 0.08164025767944476,
+      "p_bootstrap_le_zero": 0.0,
+      "statistically_significant_at_alpha_0_05": true
+    },
+    {
+      "reference": "transformer_d128_k2_full2m",
+      "comparison": "old_flow_monthly_adaptation",
+      "metric": "recall@5",
+      "n_users": 100000,
+      "alpha": 0.05,
+      "repeats": 20000,
+      "seed": 42,
+      "mean_difference": 0.23612181118881115,
+      "ci95_low": 0.23335890752719504,
+      "ci95_high": 0.23890106909826284,
+      "p_bootstrap_le_zero": 0.0,
+      "statistically_significant_at_alpha_0_05": true
+    },
+    {
+      "reference": "transformer_d128_k2_full2m",
+      "comparison": "old_flow_monthly_adaptation",
+      "metric": "ndcg@5",
+      "n_users": 100000,
+      "alpha": 0.05,
+      "repeats": 20000,
+      "seed": 42,
+      "mean_difference": 0.17643753365230488,
+      "ci95_low": 0.17426819670339863,
+      "ci95_high": 0.1786509306190264,
+      "p_bootstrap_le_zero": 0.0,
+      "statistically_significant_at_alpha_0_05": true
+    }
+  ],
+  "d128_vs_d64_full2m": [
+    {
+      "reference": "transformer_d128_k2_full2m",
+      "comparison": "transformer_d64_k2_full2m",
+      "metric": "recall@5",
+      "n_users": 100000,
+      "alpha": 0.05,
+      "repeats": 20000,
+      "seed": 42,
+      "d128_metric": 0.40463390326340326,
+      "d64_metric": 0.39864590055777555,
+      "mean_difference": 0.005988002705627706,
+      "ci95_low": 0.004390460312950941,
+      "ci95_high": 0.007537864592352098,
+      "p_bootstrap_le_zero": 0.0,
+      "statistically_significant_at_alpha_0_05": true
+    },
+    {
+      "reference": "transformer_d128_k2_full2m",
+      "comparison": "transformer_d64_k2_full2m",
+      "metric": "ndcg@5",
+      "n_users": 100000,
+      "alpha": 0.05,
+      "repeats": 20000,
+      "seed": 42,
+      "d128_metric": 0.313042538546792,
+      "d64_metric": 0.3083555063642228,
+      "mean_difference": 0.004687032182569177,
+      "ci95_low": 0.003604427368655755,
+      "ci95_high": 0.0057529531237967895,
+      "p_bootstrap_le_zero": 0.0,
+      "statistically_significant_at_alpha_0_05": true
+    }
+  ],
+  "input_sha256": {
+    "neural": "ac50270972e2e6c7b04b9322a11dfd0a2aed348e2b230d7a0faa53f3d6cd30d7",
+    "baselines": "f41da1a679ad45990d5562f5a90ba96013753c9d2a797d4611ff55b0e4af0b8e",
+    "old_flow": "2830e99b31b3f6daf0156927c0ca323bd232d7dc2087b4d1fe08f279009700e5",
+    "d64": "37e47369d9184142d96cc5e37b03651d2b72327063346177e75f868868a05cc5",
+    "evaluation_snapshot": "2e10f2262ef49b34d4fa4584d44dd3f0bc5337540268fca1897f4dd50935261b"
+  }
+}

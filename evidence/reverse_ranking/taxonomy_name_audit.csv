@@ -1,0 +1,60 @@
+param1,distinct_full_paths,leaf_id,leaf_path,vertical,category
+"Автосервис, аренда",4,210,"goods|Goods.SparePartsServices|Автосервис, аренда",goods,Goods.SparePartsServices
+"Автосервис, аренда",4,312,"transport|Transport.CarRentals|Автосервис, аренда",transport,Transport.CarRentals
+"Автосервис, аренда",4,313,"transport|Transport.MachineryRentals|Автосервис, аренда",transport,Transport.MachineryRentals
+"Автосервис, аренда",4,350,"vacancies|Vacancies.TaxiRentals|Автосервис, аренда",vacancies,Vacancies.TaxiRentals
+Аксессуары,6,12,goods|Goods.AudioVideo|Аксессуары,goods,Goods.AudioVideo
+Аксессуары,6,67,goods|Goods.Fashion|Аксессуары,goods,Goods.Fashion
+Аксессуары,6,127,goods|Goods.Hobby|Аксессуары,goods,Goods.Hobby
+Аксессуары,6,177,goods|Goods.InformationTechnology|Аксессуары,goods,Goods.InformationTechnology
+Аксессуары,6,199,goods|Goods.SpareParts|Аксессуары,goods,Goods.SpareParts
+Аксессуары,6,249,goods|Goods.Telecom|Аксессуары,goods,Goods.Telecom
+Грызуны,2,2,goods|Goods.Animals|Грызуны,goods,Goods.Animals
+Грызуны,2,113,goods|Goods.GoodsForPets|Грызуны,goods,Goods.GoodsForPets
+Другое,13,3,goods|Goods.Animals|Другое,goods,Goods.Animals
+Другое,13,37,goods|Goods.Business|Другое,goods,Goods.Business
+Другое,13,65,goods|Goods.DomesticAppliances|Другое,goods,Goods.DomesticAppliances
+Другое,13,77,goods|Goods.Food|Другое,goods,Goods.Food
+Другое,13,92,goods|Goods.Furniture|Другое,goods,Goods.Furniture
+Другое,13,119,goods|Goods.HealthAndBeauty|Другое,goods,Goods.HealthAndBeauty
+Другое,13,136,goods|Goods.Hobby|Другое,goods,Goods.Hobby
+Другое,13,168,goods|Goods.HomeAndGarden|Другое,goods,Goods.HomeAndGarden
+Другое,13,181,goods|Goods.InformationTechnology|Другое,goods,Goods.InformationTechnology
+Другое,13,213,goods|Goods.SpecializedEquipment|Другое,goods,Goods.SpecializedEquipment
+Другое,13,308,services|Services.Other|Другое,services,Services.Other
+Другое,13,327,transport|Transport.NewMachinery|Другое,transport,Transport.NewMachinery
+Другое,13,349,vacancies|Vacancies.Other|Другое,vacancies,Vacancies.Other
+Запчасти,2,50,goods|Goods.CommtransSpareParts|Запчасти,goods,Goods.CommtransSpareParts
+Запчасти,2,202,goods|Goods.SpareParts|Запчасти,goods,Goods.SpareParts
+Инструменты,2,56,goods|Goods.ConstructionRenovation|Инструменты,goods,Goods.ConstructionRenovation
+Инструменты,2,204,goods|Goods.SpareParts|Инструменты,goods,Goods.SpareParts
+Куплю,4,259,realty|Realty.Commercial|Куплю,realty,Realty.Commercial
+Куплю,4,263,realty|Realty.Foreign|Куплю,realty,Realty.Foreign
+Куплю,4,269,realty|Realty.Other|Куплю,realty,Realty.Other
+Куплю,4,274,realty|Realty.Suburban|Куплю,realty,Realty.Suburban
+Прицепы,2,206,goods|Goods.SpareParts|Прицепы,goods,Goods.SpareParts
+Прицепы,2,332,transport|Transport.NewMachinery|Прицепы,transport,Transport.NewMachinery
+Продам,6,260,realty|Realty.Commercial|Продам,realty,Realty.Commercial
+Продам,6,264,realty|Realty.Foreign|Продам,realty,Realty.Foreign
+Продам,6,268,realty|Realty.NewDevelopments|Продам,realty,Realty.NewDevelopments
+Продам,6,270,realty|Realty.Other|Продам,realty,Realty.Other
+Продам,6,273,realty|Realty.SecondarySell|Продам,realty,Realty.SecondarySell
+Продам,6,275,realty|Realty.Suburban|Продам,realty,Realty.Suburban
+Ремонт и отделка,2,304,services|Services.MajorRepair|Ремонт и отделка,services,Services.MajorRepair
+Ремонт и отделка,2,307,services|Services.MinorRepair|Ремонт и отделка,services,Services.MinorRepair
+Сдам,6,261,realty|Realty.Commercial|Сдам,realty,Realty.Commercial
+Сдам,6,265,realty|Realty.Foreign|Сдам,realty,Realty.Foreign
+Сдам,6,267,realty|Realty.LongRent|Сдам,realty,Realty.LongRent
+Сдам,6,271,realty|Realty.Other|Сдам,realty,Realty.Other
+Сдам,6,276,realty|Realty.Suburban|Сдам,realty,Realty.Suburban
+Сдам,6,346,travel|Travel.ShortRent|Сдам,travel,Travel.ShortRent
+Сниму,4,262,realty|Realty.Commercial|Сниму,realty,Realty.Commercial
+Сниму,4,266,realty|Realty.Foreign|Сниму,realty,Realty.Foreign
+Сниму,4,272,realty|Realty.Other|Сниму,realty,Realty.Other
+Сниму,4,277,realty|Realty.Suburban|Сниму,realty,Realty.Suburban
+Строительство,2,44,goods|Goods.Business|Строительство,goods,Goods.Business
+Строительство,2,306,services|Services.MajorRepair|Строительство,services,Services.MajorRepair
+Часы,2,74,goods|Goods.Fashion|Часы,goods,Goods.Fashion
+Часы,2,256,goods|Goods.Telecom|Часы,goods,Goods.Telecom
+"Шины, диски и колёса",2,51,"goods|Goods.CommtransSpareParts|Шины, диски и колёса",goods,Goods.CommtransSpareParts
+"Шины, диски и колёса",2,258,"goods|Goods.TiresAndWheels|Шины, диски и колёса",goods,Goods.TiresAndWheels

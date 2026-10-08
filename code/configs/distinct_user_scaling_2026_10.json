@@ -1,0 +1,60 @@
+{
+  "experiment": "distinct_user_scaling_2026_10",
+  "data_config": "reports/kaggle/expanded_user_scaling_2026_10/scaling_data/config.json",
+  "model_config": "configs/model_reduced.json",
+  "fold": 0,
+  "train_sampling_unit": "users",
+  "user_caps": [
+    200000,
+    400000,
+    600000,
+    800000,
+    1200000,
+    1600000,
+    0
+  ],
+  "full_positive_distinct_users": 1985972,
+  "subset_seed": 42,
+  "primary_model_seed": 42,
+  "replication_model_seeds": [
+    7,
+    123
+  ],
+  "num_interests": 2,
+  "epochs": 12,
+  "min_epochs": 8,
+  "early_stopping_patience": 3,
+  "checkpoint_selection": {
+    "snapshot": "2026-06-01",
+    "positive_row_cap": 20000,
+    "metric": "recall@5"
+  },
+  "reported_evaluation": {
+    "snapshot": "2026-07-01",
+    "positive_row_cap": 100000,
+    "metrics": [
+      "recall@5",
+      "ndcg@5",
+      "coverage"
+    ],
+    "paired_bootstrap_repeats": 20000
+  },
+  "final_holdout": {
+    "snapshot": "2026-08-01",
+    "locked": true
+  },
+  "runtime_contract": {
+    "duckdb": "1.5.4",
+    "same_device_and_software_image_for_all_points": true
+  },
+  "completed_evidence": {
+    "primary_curve_model_seed": 42,
+    "endpoint_replication_model_seeds": [
+      7,
+      123
+    ],
+    "endpoint_contrast": "full_minus_1200k_users",
+    "result": "positive Recall@5 and NDCG@5 with within-seed paired 95% intervals above zero for all three model seeds",
+    "report": "reports/data_scaling_replication_2026_10/summary.json"
+  }
+}

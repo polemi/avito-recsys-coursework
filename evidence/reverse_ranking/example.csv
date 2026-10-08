@@ -1,0 +1,11 @@
+anonymous_user,leaf_id,leaf_path,cross_user_rank,model_score,future_target_hit,ordering_note
+RR-001,202,goods|Goods.SpareParts|Запчасти,1,6.021216,0,cross-user ordering by one fixed leaf score
+RR-002,202,goods|Goods.SpareParts|Запчасти,2,5.884348,1,cross-user ordering by one fixed leaf score
+RR-003,202,goods|Goods.SpareParts|Запчасти,3,5.796371,0,cross-user ordering by one fixed leaf score
+RR-004,202,goods|Goods.SpareParts|Запчасти,4,5.747564,0,cross-user ordering by one fixed leaf score
+RR-005,202,goods|Goods.SpareParts|Запчасти,5,5.738082,0,cross-user ordering by one fixed leaf score
+RR-006,202,goods|Goods.SpareParts|Запчасти,6,5.677411,0,cross-user ordering by one fixed leaf score
+RR-007,202,goods|Goods.SpareParts|Запчасти,7,5.672112,1,cross-user ordering by one fixed leaf score
+RR-008,202,goods|Goods.SpareParts|Запчасти,8,5.568912,0,cross-user ordering by one fixed leaf score
+RR-009,202,goods|Goods.SpareParts|Запчасти,9,5.530631,0,cross-user ordering by one fixed leaf score
+RR-010,202,goods|Goods.SpareParts|Запчасти,10,5.485628,0,cross-user ordering by one fixed leaf score
